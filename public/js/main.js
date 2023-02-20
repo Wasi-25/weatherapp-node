@@ -12,7 +12,7 @@ const getInfo= async(event)=>{
         datahide.classList.add('data_hide');
     }else{
         try{
-            let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=7cb7c488ee53fee5df76335ef3205522`;
+            let url = `http://api.openweathermap.org/data/2.5/weather?q=${cityVal}&units=metric&appid=8c79f1c95c1e0ad9ea7e77c2c51c1f50`;
             const response = await fetch(url);
             const data = await response.json();
             const arrData=[data];
@@ -35,7 +35,7 @@ const getInfo= async(event)=>{
             }  
             datahide.classList.remove('data_hide');
             }catch{
-            city_name.innerText = `Please enter the city name properly`;
+            city_name.innerText = `Please enter the city name properly...`;
             datahide.classList.add('data_hide');
         }
     }
